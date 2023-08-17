@@ -78,6 +78,16 @@ dd{
   margin: 5vw 0vw 0vw 15vw;
   font-size: 1.3em;
 }
+@media (max-width: 450px){
+  h1{
+    font-size: 2rem;
+  }
+}
+@media (max-width: 320px){
+  h1{
+    font-size: 1.5rem;
+  }
+}
 /* -------------- Information -------------- */
 #bodyInfo{
   display: flex;
@@ -90,7 +100,10 @@ dd{
 #mainTabla{
   justify-content: space-between;
   margin-bottom: 5em;
-  align-items: center;
+  align-items: start;
+}
+table {
+  margin-right: 27%;
 }
 table, th, td{
   border: solid;
@@ -102,7 +115,7 @@ table, th, td{
 }
 #telYmail{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 footer{
   font-size: 130%;
@@ -116,13 +129,23 @@ footer{
   flex-direction: row;
   justify-content: space-between;
 }
-@media (min-width: 700px){
+@media (max-width: 700px){
   #mainTabla{
-    justify-content: space-between;
-    margin-right: 30vw;
+    flex-direction: column;
+    margin-right: 10vw;
+  }
+  #mainTabla>nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  nav a, nav span{
+    margin-right: 30px;
+  }
+  #mainTabla>table{
+    margin: 0vw 15vw;
   }
 }
-
 /* -------------- Rules -------------- */
 .bodyRules{
   display: flex;
@@ -130,12 +153,11 @@ footer{
 }
 #tituloRules{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-top: 1em;
+  font-size: 1rem;
 }
 #tituloRules > h1{
-  font-size: 3rem;
+  
 }
 #tituloRules:last-child{
   font-weight: bold;
